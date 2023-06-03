@@ -1,13 +1,14 @@
 version: "3.8"
 services:
   ddclient:
-    image: linuxserver/ddclient:latest
-    container_name: ddclient
-    volumes:
-      - ./config:/config
+    build:
+      context: .
+      dockerfile : Dockerfile
+    container_name: ddns-refresh
+    init: true  # workaround for bug crond https://github.com/dubiousjim/dcron/issues/13
     restart: unless-stopped
     environment:
       - "LOGIN=${LOGIN}"
       - "PASSWORD=${PASSWORD}"
     ports:
-      - 80:80
+      - 8245:8245
