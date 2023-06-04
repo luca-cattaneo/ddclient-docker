@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  ddclient:
+  ddns-refresh:
     build:
       context: .
       dockerfile : Dockerfile

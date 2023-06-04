@@ -1,5 +1,5 @@
 # dynu-ddns-refresh-ip
-docker setup to update a DNS dynu using wget
+docker setup to update a DNS dynu using curl
 
 This configuration is used to update IP on DDNS hostanmes using :
 

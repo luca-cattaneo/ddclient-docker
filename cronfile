@@ -1,1 +1,1 @@
-* * * * * wget - http://api.dynu.com/nic/update?username=${LOGIN}&password=${PASSWORD}
+* * * * * echo "$(date) - $(curl -o - "http://api.dynu.com:8245/nic/update?username=${LOGIN}&password=${PASSWORD}&myip=$(curl ifconfig.me)")"
